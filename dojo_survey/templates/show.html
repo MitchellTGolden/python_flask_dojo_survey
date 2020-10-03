@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+    <style>
+        * {
+            margin: 0px auto;
+        }
+
+        @keyframes wrapper {
+            0% {
+                background-color: peachpuff;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: coral;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: darkcyan;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: mediumseagreen;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: peachpuff;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .wrapper {
+            background-color: darkslategray;
+            width: fit-content;
+            color: peachpuff;
+            padding: 50px;
+            position: relative;
+            animation-name: wrapper;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        .subB {
+            margin-left: 200px;
+            box-shadow: black 3px 6px;
+            width: fit-content;
+            height: 22px;
+        }
+        .output{
+            text-align: start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th class ="output">Submitted</th>
+                    <th class ="output">Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td class ="output">{{ name_on_template }}</td>
+                </tr>
+                <tr>
+                    <td>Dojo Location:</td>
+                    <td class ="output">{{ dojo_on_template }}</td>
+                </tr>
+                <tr>
+                    <td>Favorite Language:</td>
+                    <td class ="output">{{ favLang_on_template }}</td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td class ="output">{{ gender_on_template }}</td>
+                </tr>
+                <tr>
+                    <td>Comment:</td>
+                    <td class ="output">{{ comment_on_template }}</td>
+                </tr>
+                <tr>
+                    <td>Your Favorite Instructor is:</td>
+                    <td class ="output">{{ check_on_template }}</td>
+                </tr>
+            </tbody>
+        </table><br>
+            <div class="subB">
+                <input type='button' value='Go Back' onclick="history.back()">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

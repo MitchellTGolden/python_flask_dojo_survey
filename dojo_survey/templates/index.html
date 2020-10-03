@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <style>
+        * {
+            margin: 3px auto;
+        }
+
+        #wrapper {
+            width: 400px;
+            height: 400px;
+            background-color: peachpuff;
+            margin-top: 0px;
+        }
+
+        form {
+            background-color: peru;
+            width: 300px;
+            height: 350px;
+            padding-left: 25px;
+            margin-top: 25px;
+
+
+        }
+
+        .subB {
+            margin-left: 220px;
+            box-shadow: black 3px 6px;
+            width: fit-content;
+            height: 22px;
+        }
+
+        select {
+            width: 120px;
+        }
+
+        .dojo {
+            margin-left: 55px;
+        }
+
+        #favLang {
+            margin-left: 27.5px;
+        }
+
+        .namebar {
+            width: 112px;
+            height: 13px;
+            margin-left: 75px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form action='/result' method='post'>
+            Your Name: <input class="namebar" type='text' name='name'><br>
+            <label for="dojo">Dojo Location:</label>
+            <select class="dojo" name="dojo" id="dojo">
+                <option value="Arlington">Arlington</option>
+                <option value="Bellevue">Bellevue</option>
+                <option value="Boise">Boise</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Dallas">Dallas</option>
+                <option value="LA">LA</option>
+                <option value="Oakland">Oakland</option>
+                <option value="Oc">OC</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Tulsa">Tulsa</option>
+            </select><br>
+            <label for="favLang">Favorite Language:</label>
+            <select class="favLang" name="favLang" id="favLang">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="C#">C#</option>
+                <option value="Java">Java</option>
+                <option value="jQuery">jQuery</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="React">React</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Sass">Sass</option>
+                <option value="WordPress">WordPress</option>
+            </select>
+            <label for="Male">Male</label>
+            <input type="radio" id="Male" name="gender" value="Male">
+            <label for="Female">Female</label>
+            <input type="radio" id="Female" name="gender" value="Female"><br>
+            <p>Which instructor do you prefer?:<br>(Please only choose one)</p>
+            <input type="checkbox" id="check1" name="check" value="Anne Jurack">
+            <label for="check1">Anne Jurack</label><br>
+            <input type="checkbox" id="check2" name="check" value="Adrien Dion">
+            <label for="check2">Adrien Dion</label><br>
+
+            <p>Comment (optional):</p>
+            <textarea name="comment" style="width:270px; height:90px;"></textarea>
+            <br>
+            <div class="subB">
+                <input type='submit' value='Submit'>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
